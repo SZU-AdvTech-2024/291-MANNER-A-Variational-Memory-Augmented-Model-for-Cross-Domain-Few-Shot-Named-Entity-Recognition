@@ -1,0 +1,24 @@
+
+
+Ontonotes:
+train：
+python cross_dataset/main.py --N=4 --K=1 --tagging_scheme=BIOES --bert_model=bert-base-uncased --max_seq_len=128 --project_type_embedding=True --type_embedding_size=128 --memory_size=15 --sample_size=5 --gpu_device=0 --seed=171 --name=ontonotes_1shot --batch_size=16 --lr=1e-4 --max_train_steps=500 --eval_every_train_steps=100 --lr_finetune=1e-4 --max_finetune_steps=50 --ignore_eval_test 
+
+evaluate：
+python cross_dataset/main.py --N=4 --K=1 --tagging_scheme=BIOES --bert_model=bert-base-uncased --max_seq_len=128 --project_type_embedding=True --type_embedding_size=128 --memory_size=15 --sample_size=5 --gpu_device=0 --seed=171 --name=ontonotes_1shot --batch_size=16 --lr=1e-4 --max_train_steps=500 --eval_every_train_steps=100 --lr_finetune=1e-4 --max_finetune_steps=50 --ignore_eval_test --test_only 
+
+5-shot train：
+python cross_dataset/main.py --N=4 --K=5 --tagging_scheme=BIOES --bert_model=bert-base-uncased --max_seq_len=128 --project_type_embedding=True --type_embedding_size=128 --memory_size=15 --sample_size=5 --gpu_device=0 --seed=171 --name=ontonotes_1shot --batch_size=16 --lr=1e-4 --max_train_steps=500 --eval_every_train_steps=100 --lr_finetune=1e-4 --max_finetune_steps=50 --ignore_eval_test 
+
+python cross_dataset/main.py --N=4 --K=5 --tagging_scheme=BIOES --bert_model=bert-base-uncased --max_seq_len=128 --project_type_embedding=True --type_embedding_size=128 --memory_size=15 --sample_size=5 --gpu_device=0 --seed=171 --name=ontonotes_1shot --batch_size=16 --lr=1e-4 --max_train_steps=500 --eval_every_train_steps=100 --lr_finetune=1e-4 --max_finetune_steps=50 --ignore_eval_test --test_only 
+
+
+python cross_dataset/main.py --N=4 --K=1 --tagging_scheme=BIOES --bert_model=bert-base-uncased --max_seq_len=128 --project_type_embedding=True --type_embedding_size=128 --memory_size=15 --sample_size=5 --gpu_device=0 --seed=171 --name=ontonotes_1shot_test --batch_size=16 --lr=1e-4 --max_train_steps=500 --eval_every_train_steps=100 --lr_finetune=1e-4 --max_finetune_steps=50 --ignore_eval_test 
+python cross_dataset/main.py --N=4 --K=1 --tagging_scheme=BIOES --bert_model=bert-base-uncased --max_seq_len=128 --project_type_embedding=True --type_embedding_size=128 --memory_size=15 --sample_size=5 --gpu_device=0 --seed=171 --name=ontonotes_1shot_test --batch_size=16 --lr=1e-4 --max_train_steps=500 --eval_every_train_steps=100 --lr_finetune=1e-4 --max_finetune_steps=50 --ignore_eval_test --test_only 
+
+
+train：WNUT
+python cross_dataset/main.py --N=3 --K=1 --tagging_scheme=BIOES --bert_model=bert-base-uncased --max_seq_len=128 --project_type_embedding=True --type_embedding_size=128 --memory_size=15 --sample_size=5 --gpu_device=0 --seed=171 --name=ontonotes_1shot --batch_size=16 --lr=1e-4 --max_train_steps=500 --eval_every_train_steps=100 --lr_finetune=1e-4 --max_finetune_steps=50 --ignore_eval_test 
+
+evaluate：
+python cross_dataset/main.py --N=3 --K=1 --tagging_scheme=BIOES --bert_model=bert-base-uncased --max_seq_len=128 --project_type_embedding=True --type_embedding_size=128 --memory_size=15 --sample_size=5 --gpu_device=0 --seed=171 --name=ontonotes_1shot --batch_size=16 --lr=1e-4 --max_train_steps=500 --eval_every_train_steps=100 --lr_finetune=1e-4 --max_finetune_steps=50 --ignore_eval_test --test_only 
